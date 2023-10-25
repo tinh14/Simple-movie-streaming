@@ -1,0 +1,76 @@
+<script type="text/x-handlebars-template" id="template">
+	<div id="admin-page-container" class="container">
+		<div class="row">
+			<div class="col-md-11"></div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-info" onclick="logout()">Đăng xuất</button>
+			</div>
+		</div>
+		<div id="data-sheet">
+			<div id="tab-container">
+				<div class="row">
+					<div class="col-md-9">
+						<ul class="nav nav-pills">
+							<li><a href="javascript: void(0)" onclick="renderMoviePage()">Phim</a></li>
+							<li><a href="javascript: void(0)" onclick="renderGenrePage()">Thể loại</a></li>
+							<li><a href="javascript: void(0)" onclick="renderActorPage()">Diễn viên</a></li>
+							<li><a href="javascript: void(0)" onclick="renderCountryPage()">Quốc gia</a></li>
+							<li><a href="javascript: void(0)" onclick="renderUserPage()">Người dùng</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+							<input id="search-btn" type="search" class="form-control" placeholder="Tìm kiếm...">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="table-container">
+			</div>
+			<div id="control-container">
+				<div class="row">
+					<div class="form-group col-md-2">
+						<button type="button" class="btn btn-block btn-info" onclick="renderAddMovieDialog()">
+							<i class="glyphicon glyphicon-plus"></i> Thêm
+						</button>
+					</div>
+					<div class="form-group col-md-2">
+						<button type="button" class="btn btn-block btn-danger">
+							<i class="glyphicon glyphicon-trash"></i> Xóa
+						</button>
+					</div>
+					<div class="form-group col-md-2">
+						<button type="button" class="btn btn-block btn-warning">
+							<i class="glyphicon glyphicon-edit"></i> Sửa
+						</button>
+					</div>
+					<div class="col-md-1">
+						<h4>Trang</h4>
+					</div>
+					<div class="col-md-1">
+						<div class="form-group">
+							<input type="text" class="form-control" disabled value="" id="num-page">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<ul class="pager" id="pager">
+							<li>
+								<a href="javascript: void(0)" id="first-btn">Đầu</a>
+							</li>
+							<li>
+								<a href="javascript: void(0)" id="previous-btn">Trước</a>
+							</li>
+							<li>
+								<a href="javascript: void(0)" id="next-btn">Sau</a>
+							</li>
+							<li>
+								<a href="javascript: void(0)" id="last-btn">Cuối</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>

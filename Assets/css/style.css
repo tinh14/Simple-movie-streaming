@@ -1,0 +1,454 @@
+body {
+	color:white!important;
+	font-family: "Times New Roman", sans-serif;
+}
+
+body::after {
+	content: "";
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url("../images/background-image.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+#root {
+	margin: 0;
+	padding: 0;
+}
+
+.glyphicon.spinning {
+/*    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;*/
+    font-size: 1.5rem;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+.col-md-2 {
+	width: 16.66666667%;
+}
+
+.movies-container {
+	position: absolute;
+	top: 20%;
+}
+
+.movies-container .row {
+	padding-bottom: 20px;
+}
+
+.movies-container .row .col-sm-2 {
+	padding-left: 0;
+}
+
+.card-image {
+	position: relative;
+	width: 100%;
+}
+
+.card-image img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+#spans {
+	position: absolute;
+	top: 3%;
+	left: 3%;
+}
+
+#spans i {
+	color: grey;
+}
+
+#spans i:hover {
+	color: white;
+}
+
+.card-img {
+	background: url("../images/title-bar-logo.jpg");
+	width: 16rem;
+}
+
+.header {
+}
+
+.header .navbar-brand {
+	pointer-events: none;
+	cursor: default;
+}
+
+.navbar-brand {
+	padding-top: 0;
+}
+
+.header a:first-child img {
+	height: 50px;
+	width: auto;
+}
+
+nav {
+	background-color: black!important;
+}
+
+.content {
+} 
+
+.message-container {
+	position: fixed;
+	right: 0;
+	top: 20%;
+	height: 20%;
+}
+
+#user-profile-btn .dropdown-menu {
+	transform: translateX(-50%) !important;
+}
+
+.main-content {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-content h1, .main-content h2, .main-content h3 {
+	font-weight: 800;
+}
+
+.watchlist-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 15%;
+}
+
+.watchlist-container a {
+	position: absolute;
+	left: 5%;
+	bottom: 0;
+}
+
+.watchlist-container a i{
+	color: grey;
+	font-size: 3rem;
+}
+
+.btn-container {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 15%;
+}
+
+.card {
+	cursor: pointer;
+	width: 18rem;
+}
+
+.watchlist-container, .btn-container {
+	z-index: 1;
+	visibility: hidden;
+}
+
+.card-image:hover > img{
+	opacity: 0.8;
+}
+
+.card-image:hover > div{
+	visibility: visible;
+}
+
+
+.card-watch-btn {
+	height: 100%;
+}
+
+#watch-btn {
+	background-image: linear-gradient(to right, #DC2424 0%, #4A569D  51%, #DC2424  100%);
+	text-align: center; 
+	text-transform: uppercase; 
+	background-size: 200% auto; 
+	color: white; 
+	border-radius: 10px; 
+	display: block;  
+}
+
+#watch-btn:hover {
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+#login-form, #register-form{
+	margin: auto;
+	width: 55%;
+}
+
+#searchBtn {
+	color: black;
+}
+
+#searchBtn:hover {
+	background-color: lightgrey;
+}
+
+#menu-info-list li a {
+	pointer-events: none;
+	cursor: text;
+}
+
+#footer-icon-list {
+}
+
+#footer-icon-list li a{
+	color: #9d9d9d;
+	cursor: default;
+}
+
+#footer-icon-list li a i {
+	font-size: 2.7rem;
+}
+
+#footer-icon-list li a i:hover {
+	cursor: pointer;
+}
+
+#footer-icon-list li:first-child a i:hover {
+	color: #4267B2;
+}
+
+#footer-icon-list li:nth-child(2) a i:hover {
+	color: #bc2a8d;
+}
+
+#footer-icon-list li:last-child a i:hover {
+	color: #FF0000;
+}
+
+.modal-dialog {
+	position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%)!important;
+    background-color: #FAF9F6;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+}
+
+.modal-dialog .modal-footer {
+	text-align: center;
+}
+
+.modal-dialog .modal-body {
+	text-align: left
+}
+
+.modal-dialog .modal-footer button{
+	width: 30%;
+}
+
+#user-avatar {
+	max-width: 60%;
+	max-height: 150px;
+}
+
+.review-container {
+	margin-top: 5%;
+	color: lightgrey;
+	background-color: #060d17;
+	border-radius: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -40%);
+}
+
+.left-container {
+	margin-top: 5%;
+}
+
+.img-card-container {
+	width: 100%;
+	margin-bottom: 10%;
+}
+
+.img-card-container .card {
+	width: 100%;
+}
+
+.movie-info-container {
+	width: 100%;
+}
+
+.movie-info-container .row {
+	margin-bottom: 5%;
+}
+
+.movie-info-container {
+	font-size: 1.8rem;
+}
+
+.movie-info-container span {
+	color: lightgrey;
+}
+
+.right-container {
+	color: white;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+.right-container span {
+	color: lightgrey;
+}
+
+#actors-list {
+	overflow-x: auto;
+	color: black;
+	white-space: nowrap;
+}
+
+#actors-list li {
+	display: inline-block;
+}
+
+.list-group-item {
+	width: 33.3%;
+	text-align: center;
+	background-color: none;
+	color: red;
+	background-color: transparent;
+	border: none;
+}
+
+.list-group-item .card-group {
+	background-color: transparent;
+}
+
+.list-group-item .card {
+	width: 100%;
+	background-color: transparent;
+}
+
+.list-group-item img {
+	width: 100%;
+	max-height: 223px;
+	border-radius: 50%;
+}
+
+iframe {
+	width: 100%;
+	height: 300px;
+}
+
+.video-container {
+	width: 80%;
+	padding: 5%;
+	padding-top: 1%;
+	margin-top: 5%;
+	color: lightgrey;
+	background-color: #060d17;
+	border-radius: 20px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%);
+}
+
+.video-container .row {
+}
+
+.video-container:first-child {
+	padding-bottom: 0;
+}
+
+.video-container:last-child {
+	padding-bottom: 5%;
+}
+
+#video {
+	width: 100%;
+	border-radius: 20px;
+}
+
+#turn-on-off:hover {
+	cursor: pointer;
+}
+
+#admin-page-container {
+	width: 100vw;
+	height: 100vh;
+	background: url('../images/background-image-2.png');
+	color: white;
+	font-size: 1.7rem;
+	padding-bottom: 2%;
+}
+
+#admin-page-container:first-child {
+	padding: 2%;
+}
+
+#data-sheet {
+	width: 95%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+	padding: 2%;
+}
+
+#tab-container {
+	width: 100%;
+}
+
+#table-container {
+	width: 100%;
+	padding-top: 2%;
+	overflow-x: auto;
+}
+
+#control-container {
+	padding-top: 2%;
+}
+
+#control-container .col-md-1 {
+	padding-right: 0;
+}
+
+#control-container h4 {
+	text-align: right;
+}
+
+#control-container .col-md-1 input{
+	text-align: center;
+}
+
+#pager {
+	margin: 0;
+}
+
+.modal{
+    pointer-events: none;
+}
+
+.modal-dialog{
+    pointer-events: all;
+ }
+
+ #add-movie-dialog .modal-dialog .row {
+ 	padding-bottom: 2%!important;
+ }

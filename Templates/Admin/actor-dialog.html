@@ -1,0 +1,17 @@
+<script type="text/x-handlebars-template" id="template">
+	<div id="actor-dialog" class="modal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h3>Diễn viên tham gia</h3>
+			</div>
+			<div class="modal-body" style="text-align: left">
+				{{#each this}}
+				<p>Id: {{id}}, Tên: {{name}}</p>
+				{{/each}}
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" onclick="destroyModal('actor-dialog')">Đóng</button>
+			</div>
+		</div>
+	</div>
+</script>

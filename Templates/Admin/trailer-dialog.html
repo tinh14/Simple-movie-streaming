@@ -1,0 +1,15 @@
+<script type="text/x-handlebars-template" id="template">
+	<div id="trailer-dialog" class="modal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h3>Trailer phim</h3>
+			</div>
+			<div class="modal-body" style="text-align: center">
+				<iframe src="{{trailer}}" width="50%"></iframe>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" onclick="destroyModal('trailer-dialog')">Đóng</button>
+			</div>
+		</div>
+	</div>
+</script>

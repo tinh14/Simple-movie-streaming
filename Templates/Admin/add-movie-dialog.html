@@ -1,0 +1,78 @@
+<script type="text/x-handlebars-template" id="template">
+	<div id="add-movie-dialog" class="modal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-header">
+				<h3>Thêm phim</h3>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-3">
+							<label>Id</label>
+							<input type="number" class="form-control" id="input-id" required>
+						</div>
+						<div class="col-md-3">
+							<label>Tên</label>
+							<input type="text" class="form-control" id="input-name" required>
+						</div>
+						<div class="col-md-3">
+							<label>Tên khác</label>
+							<input type="text" class="form-control" id="input-anotherName">
+						</div>
+						<div class="col-md-3">
+							<label>Năm phát hành</label>
+							<input type="number" class="form-control" id="input-releaseYear">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<label>Quốc gia</label>
+							<div class="form-group">
+								<select class="form-select form-control" id="input-select">
+									{{#each this}}
+									<option value={{id}}>{{name}}</option>
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<label>Link trailer</label>
+							<input type="text" class="form-control" id="input-trailer">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label>Mô tả</label>
+							<textarea class="form-control" rows="3" id="input-description"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label for="input-avatar">Chọn ảnh đại diện</label>
+							<input type="file" id="input-avatar">
+						</div>
+						<div class="col-md-6">
+							<label for="input-avatar">Chọn phim</label>
+							<input type="file" id="input-video" id="choose-avatar-btn">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label for="input-avatar">Chọn thể loại</label>
+							<button type="button" class="btn btn-info btn-block" id="choose-genre-btn" onclick="chooseGenre()">Chọn</button>
+						</div>
+						<div class="col-md-6">
+							<label for="input-avatar">Chọn diễn viên</label>
+							<button class="btn btn-info btn-block" id="choose-actor-btn" onclick="chooseActor()">Chọn</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" onclick="insertMovie(); destroyModal('add-movie-dialog')">Thêm</button>
+				
+				<button type="button" class="btn btn-default" onclick="destroyModal('choose-genre-dialog');destroyModal('choose-actor-dialog');destroyModal('add-movie-dialog');">Hủy</button>
+			</div>
+		</div>
+	</div>
+</script>

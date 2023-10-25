@@ -1,0 +1,21 @@
+<script type="text/x-handlebars-template" id="template">
+	<div class="video-container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Chúc các bạn xem phim vui vẻ</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<video src="{{src}}" controls id="video"></video>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				{{#each evaluation}}
+				<img src="{{this.src}}" class="star" alt="{{this.alt}}">
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</script>

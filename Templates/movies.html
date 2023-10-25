@@ -1,0 +1,27 @@
+<script type="text/x-handlebars-tempalte" id="template">
+	<div class="movies-container container">
+		{{#each this}}
+		<div class="row">
+			{{#each this}}
+			<div class="col-md-2">
+				<div class="card" id=movie_{{id}}>
+					<div class="card-image">
+						<div class="watchlist-container">
+							<a href="javascript: void(0)" class="card-watchlist-btn" onclick="addToWatchlist(event)">
+						  		<i class="fa fa-bookmark fa-lg" data-toggle="tooltip" title="Thêm vào danh sách theo dõi"></i>
+						  	</a>
+						</div>
+						<img src="{{avatar}}">
+				  		<div class="btn-container">
+				  			<button type="button" class="btn btn-danger card-watch-btn btn-block" onclick="renderReview(event)">Xem</button>
+				  		</div>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+		{{/each}}
+		<div class="row"><div class="col-md-12"></div></div>
+		<div class="row"><div class="col-md-12"></div></div>
+	</div>
+</script>

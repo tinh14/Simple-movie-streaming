@@ -1,0 +1,99 @@
+<script type="text/x-handlebars-template" id="template">
+	<div class="review-container container row">
+		<div class="left-container col-sm-4">
+			<div class="img-card-container">
+				<div class="card" id="{{id}}">
+					<div class="card-image">
+						<img src="{{img_src}}" alt="Lỗi gì rồi">
+				  		<div class="btn-container">
+				  			<button type="button" class="btn card-watch-btn btn-block" id="watch-btn" onclick="renderVideo(event)">Xem</button>	
+				  		</div>
+					</div>
+				</div>
+			</div>
+			<div class="movie-info-container">
+				<div class="row">
+					<div class="col-sm-5">
+						<strong>Đánh giá</strong>
+					</div>
+					<div class="col-sm-7">
+						<span>{{evaluation}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<strong>Thể loại</strong>
+					</div>
+					<div class="col-sm-7">
+						{{#each genre}}
+						<span>{{this.name}}</span>
+						{{/each}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<strong>Quốc gia</strong>
+					</div>
+					<div class="col-sm-7">
+						<span>{{country}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5">
+						<strong>Năm phát hành</strong>
+					</div>
+					<div class="col-sm-7">
+						<span>{{releaseYear}}</span>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="right-container col-sm-8">
+			<div class="movie-details">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1>{{movie_name}}</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<h3>Mô tả</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span>{{description}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<h3>Danh sách diễn viên tham gia</h3>
+					</div>
+				</div>
+				<div class="row">
+					<ul class="list-group" id="actors-list">
+					    {{#each actor}}
+					    <li class="list-group-item">
+					    	<div class="card-group">
+					    		<div class="card">
+					    			<div class="card-body">
+						    			<img src="{{this.avatar}}">
+					    			</div>
+					    			<div class="card-footer">
+					    				<strong>{{this.name}}</strong>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </li>
+					    {{/each}}
+					</ul>
+				</div>
+			</div>
+			<div class="trailers">
+				<h3>Trailers</h3>
+				<iframe src="{{trailer_src}}">
+				</iframe>
+			</div>
+		</div>
+	</div>
+</script>

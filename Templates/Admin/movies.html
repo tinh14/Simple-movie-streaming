@@ -1,0 +1,54 @@
+<script type="text/x-handlebars-template" id="template">
+	<table class="table">
+	    <thead>
+	      	<tr>
+		      	<th>Chọn</th>
+		        <th>Id</th>
+		        <th>Tên</th>
+		        <th>Tên khác</th>
+		        <th>Năm phát hành</th>
+		        <th>Quốc gia</th>
+		        <th>Mô tả</th>
+		        <th>Ảnh đại diện</th>
+		        <th>Trailer</th>
+		        <th>Video</th>
+				<th>Thể loại</th>		        
+		        <th>Diễn viên</th>
+	      	</tr>
+	    </thead>
+	    <tbody>
+	    	{{#each this}}
+	      	<tr id=tr_{{id}}>
+		      	<td>
+		      		<div class="radio text-center">
+						<input type="radio" name="optradio">
+					</div>
+		      	</td>
+		        <td>{{id}}</td>
+		        <td>{{name}}</td>
+		        <td>{{anotherName}}</td>
+		        <td>{{releaseYear}}</td>
+		        <td>{{country.name}}</td>
+		        <td>
+		        	<button type="button" class="btn btn-info" onclick="showInfo(event, 1)">Hiển thị</button>
+		        </td>
+		        <td>
+		        	<button type="button" class="btn btn-info" onclick="showInfo(event, 2)">Hiển thị</button>
+		        </td>
+		        <td>
+		        	<button type="button" class="btn btn-info" onclick="showInfo(event, 3)">Hiển thị</button>
+		        </td>
+		        <td>
+		        	<button type="button" class="btn btn-info" onclick="showInfo(event, 4)">Hiển thị</button>
+		        </td>
+		        <td>
+		        	<button type="button" class="btn btn-info" onclick="showInfo(event, 5)">Hiển thị</button>
+		        </td>
+		        <td>
+		        	<button type="button" class="btn btn-info" onclick="showInfo(event, 6)">Hiển thị</button>
+		        </td>
+		    </tr>
+		    {{/each}}
+	    </tbody>
+  	</table>
+</script>

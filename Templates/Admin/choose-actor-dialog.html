@@ -1,0 +1,19 @@
+<script type="text/x-handlebars-template" id="template">
+<div id="choose-actor-dialog" class="modal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-header">
+			<h3>Chọn diễn viên</h3>
+		</div>
+		<div class="modal-body">
+			{{#each this}}
+			<div class="checkbox-inline">
+				<label><input type="checkbox" value="{{id}}">{{name}}</label>
+			</div>
+			{{/each}}
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-success" onclick="$('#choose-actor-dialog').modal('hide');$('#add-movie-dialog').modal('show');">Chọn</button>
+		</div>
+	</div>
+</div>
+</script>

@@ -1,0 +1,59 @@
+<script type="text/x-handlebars-template" id="template">
+	<div class="main-content">
+		<form id="register-form">
+			<div class="form-group text-center">
+				<h1>Đăng ký</h1>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input type="text" id="input-username" class="form-control" placeholder="Tên đăng nhập" onkeyup="checkAccount(event)">
+				</div>
+				<span style="color: red">Tên đăng nhập không được trống</span>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+					<input type="password" id="input-password" class="form-control" placeholder="Mật khẩu" onkeyup="checkAccount(event)">
+				</div>
+				<span style="color: red">Mật khẩu không được trống</span>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+					<input type="password" id="input-confirm-password" class="form-control" placeholder="Xác nhận mật khẩu" onkeyup="checkConfirmPassword(event)">
+				</div>
+				<span style="color: red">Mật khẩu không trùng khớp</span>
+			</div>
+		    <div class="form-group row">
+		    	<div class="col-md-6">
+		    		<div class="input-group">
+			    		<span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+			    		<input type="text" class="form-control" id="input-firstname" placeholder="Tên" onkeyup="checkInfor(event)">
+			    	</div>	
+			    	<span style="color: red">Tên không được trống</span>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<div class="input-group">
+		    			<span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+		    			<input type="text" class="form-control" id="input-lastname" placeholder="Họ" onkeyup="checkInfor(event)">
+		    		</div>
+		    		<span style="color: red">Họ không được trống</span>
+		    	</div>
+		    </div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					<input type="email" class="form-control" id="input-email" placeholder="Email" onkeyup="checkEmail(event)">
+				</div>
+				<span style="color: red">Email không được trống</span>
+			</div>
+			<div class="form-group">
+				<button type="button" class="btn btn-danger form-control" onclick="register()">Đăng Ký</button>
+			</div>
+			<div class="form-group text-center">
+				<span>Đã có tài khoản? </span><a href="javascript: void(0)" onclick="renderLoginForm()" class="text-success">Đăng nhập ngay</a>
+			</div>
+		</form>	
+	</div>
+</script>
